@@ -1,0 +1,46 @@
+
+.post-details {
+
+  background-color: black;
+  padding-left: 12px;
+}
+
+.post-details h6 {
+
+  color: #ed7332;
+}
+
+.bg-travlon-blue {
+
+  background-color: #102441 !important;
+}
+
+.border-travlon-blue {
+
+  border-color: #102441 !important;
+}
+
+.text-travlon-blue {
+
+  color: #102441 !important;
+}
+
+.text-travlon-orange {
+
+  color: #ed7332 !important;
+}
+
+.bg-travlon-orange {
+
+  background-color: #ed7332 !important;
+}
+
+.border-travlon-orange {
+
+  border-color: #ed7332 !important;
+}
+
+.theme-demos {
+
+  display: none !important;
+}
