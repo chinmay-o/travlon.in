@@ -44,3 +44,16 @@
 
   display: none !important;
 }
+
+@media screen and (max-width: 500px) {
+
+  .exterior-features {
+
+    background-position: center !important;
+  }
+
+  .process-content span {
+
+    color: white !important;
+  }
+}
