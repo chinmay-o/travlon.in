@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .tp-caption[data-typewriter]:after {
 	
 	position: absolute;
@@ -16,23 +15,4 @@
 	from {visibility: visible}
 	to {visibility: hidden}
 	
-=======
-.tp-caption[data-typewriter]:after {
-	
-	position: absolute;
-	
-}
-
-.tp-caption[data-typewriter-blinking]:after {
-	
-	position: static;
-	
-}
-
-@keyframes tp-typewriter {
-	
-	from {visibility: visible}
-	to {visibility: hidden}
-	
->>>>>>> 4e6e45797854d85bffb413148ebb3537f3c5df50
 }
