@@ -35,7 +35,7 @@
                 <img src="assets/images/logo.png" class="mobile-logo" alt="">
               </a>
             </div>
-            <div class="col-auto col-lg-8 md-position-initial md-no-padding">
+            <div class="col-auto col-lg-8 md-position-initial pe-4">
               <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-line"></span>
                 <span class="navbar-toggler-line"></span>
@@ -45,35 +45,35 @@
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav alt-font">
                   <li class="nav-item">
-                    <a href="https://smartcapsules.in" class="nav-link">Smart Capsules</a>
+                    <a href="https://smartcapsules.in" target="_blank" class="nav-link">Smart Capsules</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">Exterior</a>
+                    <a id="exterior-header" href="javascript:void(0);" class="nav-link nav-link-scroll">Exterior</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">Interior</a>
+                    <a id="interior-header" href="javascript:void(0);" class="nav-link nav-link-scroll">Interior</a>
                   </li>
                   <li class="nav-item dropdown simple-dropdown">
-                    <a href="#" class="nav-link">Tour & Travels</a>
+                    <a href="javascript:void(0);" class="nav-link">Tour & Travels</a>
                     <i class="fa fa-angle-down dropdown-toggle" data-bs-toggle="dropdown" aria-hidden="true"></i>
                     <ul class="dropdown-menu" role="menu">
-                      <li class="dropdown"><a href="#">Caravan Tours</a></li>
-                      <li class="dropdown"><a href="#">Caravan Rentals</a></li>
-                      <li class="dropdown"><a href="#">Caravan Stations</a></li>
+                      <li class="dropdown"><a id="tours-header" href="javascript:void(0);" class="nav-link-scroll">Caravan Tours</a></li>
+                      <li class="dropdown"><a id="rentals-header" href="javascript:void(0);" class="nav-link-scroll">Caravan Rentals</a></li>
+                      <li class="dropdown"><a id="parks-header" href="javascript:void(0);" class="nav-link-scroll">Caravan Parks</a></li>
+                      <li class="dropdown"><a id="stations-header" href="javascript:void(0);" class="nav-link-scroll">Caravan Stations</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">About Us</a>
+                    <a id="about-header" href="javascript:void(0);" class="nav-link nav-link-scroll">About Us</a>
+                  </li>
+                  <li class="nav-item connect-btn-mobile">
+                    <a href="https://wa.me/917200610939?text=Hi" target="_blank" class="btn btn-large btn-dark-gray btn-round-edge d-table d-lg-inline-block md-margin-auto-lr bg-travlon-blue text-travlon-orange">Connect</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-auto col-lg-2 text-end hidden-xs px-lg-0">
-              <div class="header-social-icon d-inline-block">
-                <a href="../external.html?link=http://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="../external.html?link=https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="../external.html?link=http://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-              </div>
+            <div class="col-auto col-lg-2 text-end hidden-sm px-lg-0 px-md-2">
+              <a href="https://wa.me/917200610939?text=Hi" target="_blank" class="connect-btn btn btn-large btn-dark-gray btn-round-edge d-table d-lg-inline-block md-margin-auto-lr bg-travlon-blue text-travlon-orange">Connect</a>
             </div>
           </div>
         </nav>
@@ -96,12 +96,11 @@
                       </span>
                       <h6 class="alt-font text-dark-charcoal font-weight-700 text-uppercase letter-spacing-minus-1px margin-40px-bottom w-80 mx-auto xs-w-100">Know More About Travlon</h6>
                       <!-- start contact form -->
-                      <form action="#" method="post" class="margin-30px-bottom">
-                        <input class="medium-input border-radius-5px margin-25px-bottom required" type="text" name="name" placeholder="Your name" />
-                        <input class="medium-input border-radius-5px margin-25px-bottom required" type="number" name="number" placeholder="Your mobile number" />
-                        <input type="hidden" name="redirect" value="">
-                        <button class="btn btn-fancy btn-large bg-travlon-blue text-travlon-orange btn-round-edge w-100 no-margin-bottom submit" type="submit" name="submit">Request a call</button>
-                        <div class="form-results border-radius-5px d-none"></div>
+                      <form id="enquiryForm01" class="margin-30px-bottom">
+                        <input id="enquiryName" class="medium-input border-radius-5px margin-25px-bottom required" type="text" name="name" placeholder="Your name" />
+                        <input id="enquiryNumber" class="medium-input border-radius-5px margin-25px-bottom required" type="number" name="number" placeholder="Your mobile number" />
+                        <button class="btn btn-fancy btn-large bg-travlon-blue text-travlon-orange btn-round-edge w-100 no-margin-bottom" type="submit" value="submit">Request a call</button>
+                        <div id="form-results" class="form-results border-radius-5px"></div>
                       </form>
                       <!-- <p class="w-80 mx-auto text-extra-small line-height-22px m-0 xs-w-100">We will never collect information about you without your explicit consent.</p> -->
                       <!-- end contact form -->
@@ -181,7 +180,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="exterior-features" style="background-image:url('assets/images/capsules-caravan-exterior.jpg'); background-size: cover; background-position: unset;">
+      <section id="exterior-content" class="exterior-features" style="background-image:url('assets/images/capsules-caravan-exterior.jpg'); background-size: cover; background-position: unset;">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-12 col-xl-5 col-lg-6 col-md-10 md-margin-40px-bottom">
@@ -249,7 +248,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section>
+      <section id="interior-content">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-xl-5 col-lg-6 col-sm-8 text-center margin-4-rem-bottom md-margin-3-rem-bottom xs-margin-1-rem-bottom wow animate__fadeIn">
@@ -273,7 +272,7 @@
                         </div>
                         <div class="fancy-text-content padding-65px-lr md-padding-55px-lr xs-padding-30px-lr">
                           <div class="alt-font text-extra-large text-white margin-15px-bottom w-60 lg-w-90 sm-w-50 xs-w-90 md-margin-5px-bottom">Power-Assisted Recliners with Convenient Fold-Down Tables</div>
-                          <a href="#" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
+                          <a href="https://smartcapsules.in/smart-category.html?category_id=746ea468-dac8-64824" target="_blank" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
                         </div>
                       </div>
                     </div>
@@ -287,7 +286,7 @@
                         </div>
                         <div class="fancy-text-content padding-65px-lr md-padding-55px-lr xs-padding-30px-lr">
                           <div class="alt-font text-extra-large text-white margin-15px-bottom w-60 lg-w-90 sm-w-50 xs-w-90 md-margin-5px-bottom">Compact Kitchen with Refrigeration and Cooking Capabilities</div>
-                          <a href="#" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
+                          <a href="https://smartcapsules.in/smart-category.html?category_id=746ea468-dac8-64824" target="_blank" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
                         </div>
                       </div>
                     </div>
@@ -301,7 +300,7 @@
                         </div>
                         <div class="fancy-text-content padding-65px-lr md-padding-55px-lr xs-padding-30px-lr">
                           <div class="alt-font text-extra-large text-white margin-15px-bottom w-60 lg-w-90 sm-w-50 xs-w-90 md-margin-5px-bottom">Full Flat Bed with Capsules for Overhead Storage</div>
-                          <a href="#" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
+                          <a href="https://smartcapsules.in/smart-category.html?category_id=746ea468-dac8-64824" target="_blank" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
                         </div>
                       </div>
                     </div>
@@ -315,7 +314,7 @@
                         </div>
                         <div class="fancy-text-content padding-65px-lr md-padding-55px-lr xs-padding-30px-lr">
                           <div class="alt-font text-extra-large text-white margin-15px-bottom w-60 lg-w-90 sm-w-50 xs-w-90 md-margin-5px-bottom">Climate Control Unit & Ant-Viral Protection System</div>
-                          <a href="#" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
+                          <a href="https://smartcapsules.in/smart-category.html?category_id=746ea468-dac8-64824" target="_blank" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
                         </div>
                       </div>
                     </div>
@@ -329,7 +328,7 @@
                         </div>
                         <div class="fancy-text-content padding-65px-lr md-padding-55px-lr xs-padding-30px-lr">
                           <div class="alt-font text-extra-large text-white margin-15px-bottom w-60 lg-w-90 sm-w-50 xs-w-90 md-margin-5px-bottom">Integrated Electric Toilet and Shower System</div>
-                          <a href="#" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
+                          <a href="https://smartcapsules.in/smart-category.html?category_id=746ea468-dac8-64824" target="_blank" class="btn btn-fancy btn-very-small bg-travlon-orange btn-round-edge margin-15px-top">View Vehicle</a>
                         </div>
                       </div>
                     </div>
@@ -375,7 +374,7 @@
                 <li class="grid-sizer"></li>
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior01.jpg" alt="" />
@@ -389,7 +388,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior02.jpg" alt="" />
@@ -405,7 +404,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior03.jpg" alt="" />
@@ -421,7 +420,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior04.jpg" alt="" />
@@ -437,7 +436,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior05.jpg" alt="" />
@@ -453,7 +452,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior06.jpg" alt="" />
@@ -469,7 +468,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior07.jpg" alt="" />
@@ -485,7 +484,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior08.jpg" alt="" />
@@ -501,7 +500,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior09.jpg" alt="" />
@@ -517,7 +516,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior10.jpg" alt="" />
@@ -533,7 +532,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior11.jpg" alt="" />
@@ -549,7 +548,7 @@
                 <!-- end portfolio item -->
                 <!-- start portfolio item -->
                 <li class="grid-item wow animate__fadeIn">
-                  <a href="#">
+                  <a href="https://smartcapsules.in/smart-vehicles/smart-vehicles-project.html?project_id=5c8e6446-1404-6048a" target="_blank">
                     <div class="portfolio-box">
                       <div class="portfolio-image bg-travlon-orange">
                         <img src="assets/images/caravan-interior12.jpg" alt="" />
@@ -586,7 +585,7 @@
                 <li class="grid-item wow animate__fadeIn">
                   <div class="blog-post">
                     <div class="blog-post-image">
-                      <a href="#"><img src="assets/images/fleet01.png" alt="" /></a>
+                      <a href="https://smartcapsules.in" target="_blank"><img src="assets/images/fleet01.png" alt="" /></a>
                     </div>
                     <div class="post-details bg-travlon-blue">
                       <h6 class="text-extra-dark-gray alt-font font-weight-600">Monster</h6>
@@ -598,7 +597,7 @@
                 <li class="grid-item wow animate__fadeIn" data-wow-delay="0.2s">
                   <div class="blog-post">
                     <div class="blog-post-image">
-                      <a href="#"><img src="assets/images/fleet02.png" alt="" /></a>
+                      <a href="https://smartcapsules.in" target="_blank"><img src="assets/images/fleet02.png" alt="" /></a>
                     </div>
                     <div class="post-details bg-travlon-blue">
                       <h6 class="text-extra-dark-gray alt-font font-weight-600">Tourer</h6>
@@ -610,7 +609,7 @@
                 <li class="grid-item wow animate__fadeIn" data-wow-delay="0.4s">
                   <div class="blog-post">
                     <div class="blog-post-image">
-                      <a href="#"><img src="assets/images/fleet03.png" alt="" /></a>
+                      <a href="https://smartcapsules.in" target="_blank"><img src="assets/images/fleet03.png" alt="" /></a>
                     </div>
                     <div class="post-details bg-travlon-blue">
                       <h6 class="text-extra-dark-gray alt-font font-weight-600">Grandeur</h6>
@@ -622,7 +621,7 @@
                 <li class="grid-item wow animate__fadeIn" data-wow-delay="0.6s">
                   <div class="blog-post">
                     <div class="blog-post-image">
-                      <a href="#"><img src="assets/images/fleet04.png" alt="" /></a>
+                      <a href="https://smartcapsules.in" target="_blank"><img src="assets/images/fleet04.png" alt="" /></a>
                     </div>
                     <div class="post-details bg-travlon-blue">
                       <h6 class="text-extra-dark-gray alt-font font-weight-600">Land Roamer</h6>
@@ -637,7 +636,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="bg-travlon-orange position-relative">
+      <section id="tours-content" class="bg-travlon-orange position-relative">
         <div class="container">
           <div class="row justify-content-lg-center">
             <div class="col-12 col-lg-6 col-sm-8 text-lg-center margin-6-rem-bottom lg-margin-4-rem-bottom md-margin-3-rem-bottom xs-margin-5-rem-bottom wow animate__fadeIn">
@@ -781,7 +780,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="bg-light-gray">
+      <section id="rentals-content" class="bg-light-gray">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-xl-5 col-lg-6 col-sm-8 text-center margin-2-rem-bottom md-margin-3-rem-bottom xs-margin-1-rem-bottom wow animate__fadeIn">
@@ -794,14 +793,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/religious-tour.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Religious Festival
                   </a>
                 </div>
@@ -812,14 +811,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/business-trip.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Business Trips
                   </a>
                 </div>
@@ -830,14 +829,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/event-management.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Event Management
                   </a>
                 </div>
@@ -848,14 +847,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/expo-trade-events.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Expo & Trade Events
                   </a>
                 </div>
@@ -866,14 +865,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/boardroom-meeting.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     On Board Meetings
                   </a>
                 </div>
@@ -884,14 +883,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/weddings.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Weddings
                   </a>
                 </div>
@@ -902,14 +901,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/celebrities.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Celebrities
                   </a>
                 </div>
@@ -920,14 +919,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/airport-pickups.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Airport Pick up & Drop
                   </a>
                 </div>
@@ -938,14 +937,14 @@
             <div class="col margin-30px-bottom xs-margin-15px-bottom wow animate__fadeIn">
               <div class="interactive-banners-style-08 box-shadow-large bg-white h-100 border-radius-6px overflow-hidden">
                 <div class="interactive-banners-box-image">
-                  <a href="#">
+                  <a href="javascript:void(0);">
                     <img src="assets/images/corporate-events.jpg" alt="">
 
 
                   </a>
                 </div>
                 <div class="interactive-banners-box-content padding-35px-all text-center xs-padding-25px-all">
-                  <a href="#" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
+                  <a href="javascript:void(0);" class="text-extra-dark-gray text-uppercase text-extra-dark-gray-hover text-medium alt-font font-weight-500 d-block line-height-26px">
                     Corporate Events
                   </a>
                 </div>
@@ -957,7 +956,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="pt-4 pb-0">
+      <section id="parks-content" class="pt-4 pb-0">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-xl-5 col-lg-6 col-sm-8 text-center margin-4-rem-top margin-2-rem-bottom md-margin-3-rem-bottom xs-margin-1-rem-bottom wow animate__fadeIn">
@@ -1054,7 +1053,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="pt-5 pb-0">
+      <section id="stations-content" class="pt-5 pb-0">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-xl-5 col-lg-6 col-sm-8 text-center margin-4-rem-top margin-2-rem-bottom md-margin-3-rem-bottom xs-margin-1-rem-bottom wow animate__fadeIn">
@@ -1161,7 +1160,7 @@
       </section>
       <!-- end section -->
       <!-- start section -->
-      <section class="pt-5 pb-0">
+      <section id="about-content" class="pt-5 pb-0">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-xl-5 col-lg-6 col-sm-8 text-center margin-4-rem-top margin-2-rem-bottom md-margin-3-rem-bottom xs-margin-1-rem-bottom wow animate__fadeIn">
@@ -1186,7 +1185,7 @@
                   They have designed and built premium vehicles for clients around the globe for
                   the past 25 years. As the company looks to the future, capsules remain committed to its
                   core values of quality, service, and innovation.</p>
-                <a href="#" class="btn btn-large btn-link text-white text-white-hover align-self-start">www.smartcapsules.in</a>
+                <a href="https://smartcapsules.in" target="_blank" class="btn btn-large btn-link text-white text-white-hover align-self-start">www.smartcapsules.in</a>
               </div>
             </div>
             <div class="col-12 col-lg-4 col-md-6">
@@ -1218,7 +1217,7 @@
                       <div class="bg-travlon-orange padding-6-rem-lr padding-7-rem-tb lg-padding-4-rem-lr lg-padding-5-rem-tb md-padding-5-rem-all">
                           <span class="text-extra-medium alt-font margin-20px-bottom d-block text-white opacity-7">Recieved</span>
                           <h5 class="alt-font text-white font-weight-500 margin-40px-bottom xs-margin-20px-bottom">Best Innovative Product Award for Caravan Tourism</h5>
-                          <a href="#" class="btn btn-extra-large btn-link text-white text-extra-dark-gray-hover">at TTF Fair 2022</a>
+                          <a href="https://www.ttfotm.com" class="btn btn-extra-large btn-link text-white text-extra-dark-gray-hover">at TTF Fair 2022</a>
                       </div>
                   </div>
               </div>
@@ -1231,22 +1230,22 @@
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 client-logo-style-03">
             <!-- start client logo item -->
             <div class="col text-center wow animate__fadeIn" data-wow-delay="0.2s">
-              <a href="#"><img src="assets/images/travlon-partner01.png" alt="" /></a>
+              <a href="javascript:void(0);"><img src="assets/images/travlon-partner01.png" alt="" /></a>
             </div>
             <!-- end client logo item -->
             <!-- start client logo item -->
             <div class="col text-center wow animate__fadeIn" data-wow-delay="0.4s">
-              <a href="#"><img src="assets/images/travlon-partner02.png" alt="" /></a>
+              <a href="javascript:void(0);"><img src="assets/images/travlon-partner02.png" alt="" /></a>
             </div>
             <!-- end client logo item -->
             <!-- start client logo item -->
             <div class="col text-center wow animate__fadeIn" data-wow-delay="0.6s">
-              <a href="#"><img src="assets/images/travlon-partner03.png" alt="" /></a>
+              <a href="javascript:void(0);"><img src="assets/images/travlon-partner03.png" alt="" /></a>
             </div>
             <!-- end client logo item -->
             <!-- start client logo item -->
             <div class="col text-center wow animate__fadeIn" data-wow-delay="0.8s">
-              <a href="#"><img src="assets/images/travlon-partner04.png" alt="" /></a>
+              <a href="javascript:void(0);"><img src="assets/images/travlon-partner04.png" alt="" /></a>
             </div>
             <!-- end client logo item -->
           </div>
@@ -1269,10 +1268,11 @@
               <div class="col-12 col-lg-2 offset-sm-1 col-sm-5 order-sm-2 order-lg-0 md-margin-40px-bottom xs-margin-25px-bottom">
                 <span class="alt-font font-weight-500 d-block text-white margin-20px-bottom xs-margin-10px-bottom">Travlon</span>
                 <ul>
-                  <li><a href="#">Caravan Tours</a></li>
-                  <li><a href="#">Caravan Rentals</a></li>
-                  <li><a href="#">Caravan Stations</a></li>
-                  <li><a href="#">About Us</a></li>
+                  <li><a id="tours-footer" class="nav-link-scroll" href="javascript:void(0);">Caravan Tours</a></li>
+                  <li><a id="rentals-footer" href="javascript:void(0);">Caravan Rentals</a></li>
+                  <li><a id="parks-footer" href="javascript:void(0);">Caravan Parks</a></li>
+                  <li><a id="stations-footer" href="javascript:void(0);">Caravan Stations</a></li>
+                  <li><a id="about-footer" href="javascript:void(0);">About Us</a></li>
                 </ul>
               </div>
               <!-- end footer column -->
@@ -1280,10 +1280,10 @@
               <div class="col-12 col-lg-2 col-sm-5 offset-sm-1 offset-lg-0 order-sm-4 order-lg-0 xs-margin-25px-bottom">
                 <span class="alt-font font-weight-500 d-block text-white margin-20px-bottom xs-margin-10px-bottom">Smart Capsules</span>
                 <ul>
-                  <li><a href="#">Smart Living</a></li>
-                  <li><a href="#">Smart Vehicles</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Invest</a></li>
+                  <li><a href="https://smartcapsules.in" target="_blank">Smart Living</a></li>
+                  <li><a href="https://smartcapsules.in" target="_blank">Smart Vehicles</a></li>
+                  <li><a href="https://smartcapsules.in/about-us.html" target="_blank">About Us</a></li>
+                  <li><a href="https://smartcapsules.in/investor.html" target="_blank">Invest</a></li>
                 </ul>
               </div>
               <!-- end footer column -->
@@ -1291,12 +1291,11 @@
               <div class="col-12 col-xl-3 offset-xl-1 col-lg-4 col-sm-6 order-sm-3 order-lg-0">
                 <span class="alt-font font-weight-500 d-block text-white margin-20px-bottom xs-margin-10px-bottom">Subscribe to Newsletter</span>
                 <p>Enter your email address for receiving valuable newsletters.</p>
-                <form action="#" method="post">
+                <form id="enquiryForm02">
                   <div class="newsletter-style-03 position-relative">
-                    <input class="small-input border-color-medium-gray rounded m-0 required" name="email" placeholder="Enter your email address" type="email">
-                    <input type="hidden" name="redirect" value="">
-                    <button class="btn no-border bg-travlon-orange rounded-end submit" type="submit"><i class="feather icon-feather-mail text-white icon-extra-small m-0"></i></button>
-                    <div class="form-results rounded position-absolute d-none"></div>
+                    <input id="subscriber" class="small-input border-color-medium-gray rounded m-0 required" name="email" placeholder="Enter your email address" type="email">
+                    <button class="btn no-border bg-travlon-orange rounded-end" value="submit" type="submit"><i class="feather icon-feather-mail text-white icon-extra-small m-0"></i></button>
+                    <div id="subscribe-results" class="text-white rounded position-absolute"></div>
                   </div>
                 </form>
               </div>
@@ -1336,6 +1335,19 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/theme-vendors.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="assets/custom.js"></script>
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+
+    <!-- Firebase Database -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="assets/firebase.js"></script>
+    <script src="assets/enquiry.js"></script>
+
   </body>
 
 </html>

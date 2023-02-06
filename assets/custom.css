@@ -45,6 +45,24 @@
   display: none !important;
 }
 
+.connect-btn-mobile {
+
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+  .connect-btn {
+
+    display: none !important;
+  }
+
+  .connect-btn-mobile {
+
+    display: block;
+  }
+}
+
 @media screen and (max-width: 500px) {
 
   .exterior-features {
